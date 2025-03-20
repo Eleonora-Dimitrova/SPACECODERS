@@ -1,0 +1,17 @@
+ h1 {
+            font-family: 'Comic Sans MS', italic, sans-serif;
+			font-size:50px;
+			 text-decoration: none;
+			 color:#049EDB; /* Поправено: 'light blue' не е валиден цвят, трябва да е 'lightblue' */
+        }
+		nav {
+		
+			font-family: 'Verdana', cursive, sans-serif;
+			font-size:20px;
+		}
+        a {
+			border: 2px solid black;
+			border-radius:8px;
+            text-decoration: none;  /* Премахва подчертаването на линковете */
+            color: inherit;         /* Линковете ще наследяват цвета на родителския елемент */
+        }
