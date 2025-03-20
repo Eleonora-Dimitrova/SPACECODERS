@@ -14,3 +14,22 @@ function getingTheData(){
     });
     
 }
+function sendData() {
+    let text = document.getElementById("userInput").value;
+    document.getElementById("output").innerText = "You enter: " + text;
+  }
+  fetch('/api/data')  
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Неуспешно зареждане на данни');
+          }
+          return response.json();
+      })
+      .then(data => {
+          console.log(data);
+         
+          alert(data.message);  
+      .catch(error => {
+      
+      });
+  
