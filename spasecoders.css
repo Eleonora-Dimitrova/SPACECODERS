@@ -6,8 +6,9 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: rgb(73, 119, 212);
   color: white;
+  font-family:'Optima', sans-serif;
   padding: 20px;
   text-align: center;
 }
@@ -19,14 +20,16 @@ nav {
 nav a {
   text-decoration: none;
   padding: 10px 20px;
-  background-color: blue;
+  background-color: rgb(73, 119, 212);
   color: white;
   border-radius: 4px;
   margin: 0 10px;
+  font-family:'Optima', sans-serif;
 }
 
 nav a:hover {
-  background-color: blue;
+  background-color: rgb(73, 108, 212);
+
 }
 
 main {
@@ -34,10 +37,11 @@ main {
 }
 
 section {
-  background-color: white;
+  background-color: rgb(240, 240, 233);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family:'Optima', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -50,3 +54,8 @@ ul {
   margin-left: 20px;
 }
 
+#welcome {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+}
