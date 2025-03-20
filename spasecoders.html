@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инсулин и Калкулатор</title>
+  <link rel="stylesheet" href="spasecoders.css">
+</head>
+<body>
+  <header>
+    <h1>Инсулин и Калкулатор</h1>
+    <!-- Меню с линкове към секциите -->
+    <nav>
+      <a href="#calculator">Калкулатор</a>
+      <a href="#information">Информация</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Секция за Калкулатора -->
+    <section id="calculator">
+      <h2>Калкулатор за инсулин</h2>
+      <label for="glucose">Ниво на глюкоза (mg/dL):</label>
+      <input type="number" id="glucose" placeholder="Въведете ниво на глюкоза">
+
+      <label for="carbs">Въглехидрати (грамове):</label>
+      <input type="number" id="carbs" placeholder="Въведете въглехидрати">
+
+      <button onclick="calculateInsulin()">Изчисли инсулин</button>
+      
+      <p id="result"></p>
+    </section>
+
+    <!-- Секция за Информация -->
+    <section id="information">
+      <h2>Какво е диабет?</h2>
+      <p>Диабетът е заболяване, което засяга начина, по който тялото обработва глюкозата (захарта) в кръвта. Съществуват два основни типа диабет — тип 1 и тип 2. При диабет тип 1, тялото не произвежда инсулин, а при тип 2, инсулинът не е ефективен или не се произвежда в достатъчни количества.</p>
+
+      <h3>Как да контролираме диабет?</h3>
+      <ul>
+        <li>Редовно измерване на нивото на кръвната захар.</li>
+        <li>Спазване на здравословна диета и правилно дозиране на инсулин.</li>
+        <li>Редовна физическа активност.</li>
+        <li>Консултация с медицински специалист за мониторинг и лечение.</li>
+      </ul>
+    </section>
+  </main>
+
+
+  <script src="spasecoders.js"></script>
+</body>
+</html>
