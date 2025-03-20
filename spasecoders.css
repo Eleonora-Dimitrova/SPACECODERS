@@ -8,6 +8,7 @@ body {
 header {
   background-color: rgb(73, 119, 212);
   color: white;
+  font-family:'Optima', sans-serif;
   padding: 20px;
   text-align: center;
 }
@@ -23,6 +24,7 @@ nav a {
   color: white;
   border-radius: 4px;
   margin: 0 10px;
+  font-family:'Optima', sans-serif;
 }
 
 nav a:hover {
@@ -39,6 +41,7 @@ section {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family:'Optima', sans-serif;
   margin-bottom: 20px;
 }
 
