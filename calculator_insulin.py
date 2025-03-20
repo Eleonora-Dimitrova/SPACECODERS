@@ -12,11 +12,12 @@ def calculate():
     blood_sugar = data.get('blood_sugar')
 
     insulin_per_10g_carbs = 1
-    
+    sensitivity_to_insulin = 0.5
+
     insulin_carbs = (carbs / 10) * insulin_per_10g_carbs
     
     if blood_sugar > 8:
-        insulin_for_sugar = (blood_sugar - 8) * 0.5 
+        insulin_for_sugar = (blood_sugar - 8) * sensitivity_to_insulin 
     else:
         insulin_for_sugar = 0
     
@@ -31,3 +32,8 @@ def calculate():
     
 if __name__ ==  "__main__":
     app.run(debug=True)
+    
+@app.errorhandler(500)
+
+def internal_error(error):
+    return jsonify({"message": "An internal error occurred. Please try again later."}), 500
