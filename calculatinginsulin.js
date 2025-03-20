@@ -36,19 +36,5 @@ function sendData() {
     document.getElementById("output").innerText = "You entered: " + text;
 }
 
-fetch('/api/data')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Неуспешно зареждане на данни');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        alert(data.message);
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
 
   
