@@ -30,10 +30,11 @@ def calculate():
     else:
         return jsonify({"message": "Your insulin level is optimal."})
     
-if __name__ ==  "__main__":
-    app.run(debug=True)
-    
 @app.errorhandler(500)
 
 def internal_error(error):
     return jsonify({"message": "An internal error occurred. Please try again later."}), 500
+
+if __name__ ==  "__main__":
+    app.run(debug=True)
+    
