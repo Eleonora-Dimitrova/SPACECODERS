@@ -20,18 +20,37 @@
   <main>
     <section id="calculator">
       <h2>Изчисли инсулин</h2>
-      <label for="glucose">Ниво на глюкоза (mmol):</label>
-      <input type="number" id="glucose" placeholder="Въведете ниво на глюкоза">
-
-      <label for="carbs">Въглехидрати (грамове):</label>
-      <input type="number" id="carbs" placeholder="Въведете въглехидрати">
-
+      <h3>Въведи</h3>
+      <p>грамове въглехидрати:</p>
+      <input  type="number" id="carbs">
+      <br>
+      <p>текуща кръвна захар (mmol):</p>
+      <input type="number" id="bloodSugar">
+      <br>
+      <p>желана кръвна захар (mmol):</p>
+      <input type="number" id="targetBloodSugar">
+      <br>
+      <p>1 единица инсулин покрива 12г въглехидрати:</p>
+      <input type="number" id="insulinCarbRatio">
+      <br>
+      <p>1 единица инсулин намалява кръвната захар с 1 mmol:</p>
+      <input type="number" id="correctionFactor">
+      <br>
       <button onclick="calculateInsulin()">Изчисли инсулин</button>
-      
-      <p id="result"></p>
-    </section>
+      <br>
+      <h2>Болус за въглехидрати</h2>
+      <h3><output id="answer1"></output></h3>
+      <br>
+      <h2>Кръвна захар (mmol)</h2>
+      <h3><output id="answer2"></output></h3>
+      <br>
+      <h2>Обща доза инсулин</h2>
+      <h3><output id="answer3"></output></h3>
+      </section>
   </main>
 
-  <script src="spasecoders.js"></script>
+  <script src="CalcolatingTheInsulin.js"></script>
 </body>
 </html>
+
+
