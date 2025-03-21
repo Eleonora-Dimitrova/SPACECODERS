@@ -85,7 +85,7 @@ function round(value, precision) {
 
     if (stored_insulin_input) {
         text_insulin.textContent = stored_insulin_input;
-        insulin_output.value = stored_insulin_input; 
+        insulin_output.textContent = stored_insulin_input;
     }
 
     const save_to_local_storage_insulin = () => {
@@ -93,7 +93,9 @@ function round(value, precision) {
         localStorage.setItem("insulin_output", insulinValue);
         text_insulin.textContent = insulinValue;
     };
-    
+
+
+button_insulin_save.addEventListener('click', save_to_local_storage_insulin);
     calculateInsulin1()
     
     function calculateInsulin1() {
