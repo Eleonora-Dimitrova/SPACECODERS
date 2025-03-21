@@ -81,17 +81,20 @@ function round(value, precision) {
     const insulin_output = document.querySelector("#answer3");
     const text_insulin = document.querySelector("#insulin_text");
     const button_insulin_save = document.querySelector("#insulin_button");
-    const stored_insulin_input = localStorage.getItem('insulin_output');
+    const stored_insulin_input = localStorage.getItem('stored_insulin_input');
 
     if (stored_insulin_input) {
         text_insulin.textContent = stored_insulin_input;
-        insulin_output.textContent = stored_insulin_input;
     }
+
+    window.addEventListener("load", () => {
+        insulin_output.textContent = ""; 
+    });
 
     const save_to_local_storage_insulin = () => {
         const insulinValue = insulin_output.textContent;
-        localStorage.setItem("insulin_output", insulinValue);
-        text_insulin.textContent = insulinValue;
+text_insulin.textContent = insulinValue; 
+    localStorage.setItem("stored_insulin_input", insulinValue);
     };
 
 
