@@ -82,3 +82,7 @@ ul {
 .container_with_saving_data {
   margin-bottom: 15px;
 }
+
+button {
+  background-color: rgb(233, 219, 203);
+}
