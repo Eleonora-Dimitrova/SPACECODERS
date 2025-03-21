@@ -4,6 +4,22 @@ function calculateInsulin() {
     let targetBloodSugar = Number(document.getElementById("targetBloodSugar").value)
     let insulinCarbRatio = Number(document.getElementById("insulinCarbRatio").value)
     let correctionFactor = Number(document.getElementById("correctionFactor").value)
+
+    //alert bloodSugar
+    if (bloodSugar < 2.9) {
+        alert ("Нивото " + bloodSugar + " е: Опасно ниска (риск за живота) вземи мерки!");
+    } else if (bloodSugar >= 2.9 && bloodSugar <= 4.9) {
+        alert ("Нивото " + bloodSugar + " е: Нискo вземи мерки!");
+    } else if (bloodSugar >= 5 && bloodSugar <= 10) {
+        //alert ("Нивото " + bloodSugar + " е: Нормалнo");
+    } else if (bloodSugar > 10 && bloodSugar <= 13) {
+        alert ("Нивото " + bloodSugar + " е: Средно висока");
+    } else if (bloodSugar > 13 && bloodSugar <= 30) {
+        alert ("Нивото " + bloodSugar + " е: Висока");
+    } else {
+        alert ("Нивото " + bloodSugar + " е: Опасно висока (риск за живота)");
+    }
+
     
     let carbBolus = round((carbs / insulinCarbRatio),2);
     
