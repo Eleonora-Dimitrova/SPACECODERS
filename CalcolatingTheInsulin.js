@@ -96,5 +96,3 @@ function round(value, precision) {
 
 
 button_insulin_save.addEventListener('click', save_to_local_storage_insulin);
-
-calculateInsulin1()
