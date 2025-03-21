@@ -93,13 +93,21 @@ function round(value, precision) {
         localStorage.setItem("insulin_output", insulinValue);
         text_insulin.textContent = insulinValue;
     };
-
-    button_insulin_save.addEventListener('click', save_to_local_storage_insulin);
-
-    document.getElementById("carbs").addEventListener("input", calculateInsulin);
-    document.getElementById("bloodSugar").addEventListener("input", calculateInsulin);
-    document.getElementById("targetBloodSugar").addEventListener("input", calculateInsulin);
-    document.getElementById("insulinCarbRatio").addEventListener("input", calculateInsulin);
-    document.getElementById("correctionFactor").addEventListener("input", calculateInsulin);
-
-    calculateInsulin();
+    
+    calculateInsulin1()
+    
+    function calculateInsulin1() {
+        let carbs = Number(document.getElementById("carbs").value)
+        let bloodSugar = Number(document.getElementById("bloodSugar").value)
+        let targetBloodSugar = Number(document.getElementById("targetBloodSugar").value)
+        let insulinCarbRatio = Number(document.getElementById("insulinCarbRatio").value)
+        let correctionFactor = Number(document.getElementById("correctionFactor").value)
+            
+        let carbBolus = round((carbs / insulinCarbRatio),2);
+        let correctionBolus = round(((bloodSugar - targetBloodSugar) / correctionFactor),2);
+        let totalInsulin = round((carbBolus + correctionBolus),2);
+            
+        document.getElementById("answer1").textContent = `${carbBolus}`
+        document.getElementById("answer2").textContent = `${correctionBolus}`
+        document.getElementById("answer3").textContent = `${totalInsulin}`
+    }
