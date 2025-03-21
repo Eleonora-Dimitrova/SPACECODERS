@@ -5,13 +5,10 @@ function calculateInsulin() {
     let insulinCarbRatio = Number(document.getElementById("insulinCarbRatio").value)
     let correctionFactor = Number(document.getElementById("correctionFactor").value)
     
-    // Болус за въглехидрати
     let carbBolus = round((carbs / insulinCarbRatio),2);
     
-    // Корекционен болус
     let correctionBolus = round(((bloodSugar - targetBloodSugar) / correctionFactor),2);
     
-    // Обща доза инсулин
     let totalInsulin = round((carbBolus + correctionBolus),2);
     
     
