@@ -8,12 +8,9 @@ function calculateInsulin() {
     
 
     //alert bloodSugar
-    let through = 1;
     if (bloodSugar < 2.9) {
-        let through = 0;
         alert ("Нивото " + bloodSugar + " е: Опасно ниска (риск за живота) вземи мерки!");
     } else if (bloodSugar >= 2.9 && bloodSugar <= 4.9) {
-        let through = 0;
         alert ("Нивото " + bloodSugar + " е: Нискo вземи мерки!");
     } else if (bloodSugar >= 5 && bloodSugar <= 10) {
         //alert ("Нивото " + bloodSugar + " е: Нормалнo");
@@ -25,15 +22,12 @@ function calculateInsulin() {
         alert ("Нивото " + bloodSugar + " е: Опасно висока (риск за живота)");
     }
 
-    if(through){
         let carbBolus = round((carbs / insulinCarbRatio),2);
         let correctionBolus = round(((bloodSugar - targetBloodSugar) / correctionFactor),2);
         let totalInsulin = round((carbBolus + correctionBolus),2);
         document.getElementById("answer1").textContent = `${carbBolus}`
         document.getElementById("answer2").textContent = `${correctionBolus}`
-        document.getElementById("answer3").textContent = `${totalInsulin}`
-    }
-    
+        document.getElementById("answer3").textContent = `${totalInsulin}` 
         
     
 }
