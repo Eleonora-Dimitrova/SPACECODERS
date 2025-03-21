@@ -59,3 +59,26 @@ ul {
   padding: 10px;
   margin: 5px;
 }
+
+#calculator {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#calculations {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#Saved_data {
+  flex: 1;
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.container_with_saving_data {
+  margin-bottom: 15px;
+}

@@ -20,37 +20,60 @@
 
   <main>
     <section id="calculator">
-      <h2>Изчисли инсулин</h2>
-      <h3>Въведи</h3>
-      <p>грамове въглехидрати:</p>
-      <input  type="number" id="carbs">
-      <br>
-      <p>текуща кръвна захар (mmol):</p>
-      <input type="number" id="bloodSugar">
-      <br>
-      <p>желана кръвна захар (mmol):</p>
-      <input type="number" id="targetBloodSugar">
-      <br>
-      <p>1 единица инсулин покрива 12г въглехидрати:</p>
-      <input type="number" id="insulinCarbRatio">
-      <br>
-      <p>1 единица инсулин намалява кръвната захар с 1 mmol:</p>
-      <input type="number" id="correctionFactor">
-      <br>
-      <button onclick="calculateInsulin()">Изчисли инсулин</button>
-      <br>
-      <h3>Болус за въглехидрати</h3>
-      <h4><output id="answer1"></output></h4>
-      <br>
-      <h3>Кръвна захар (mmol)</h2>
-      <h4><output id="answer2"></output></h3>
-      <br>
-      <h3>Обща доза инсулин</h2>
-      <h4><output id="answer3"></output></h4>
+      <div id = "calculations">
+        <h2>Изчисли инсулин</h2>
+        <h3>Въведи</h3>
+        <div class = "container_with_saving_data">
+          <p>грамове въглехидрати:</p>
+          <input  type="number" id="carbs">
+          <button id = "carbs_button">Запази</button>
+        </div>
+        <br>
+        <div class = "container_with_saving_data">
+          <p>текуща кръвна захар (mmol):</p>
+          <input type="number" id="bloodSugar">
+          <button id = "blood_sugar_button">Запази</button>
+        </div>
+        <br>
+        <p>желана кръвна захар (mmol):</p>
+        <input type="number" id="targetBloodSugar">
+        <br>
+        <p>1 единица инсулин покрива 12г въглехидрати:</p>
+        <input type="number" id="insulinCarbRatio">
+        <br>
+        <p>1 единица инсулин намалява кръвната захар с 1 mmol:</p>
+        <input type="number" id="correctionFactor">
+        <br>
+        <button onclick="calculateInsulin()">Изчисли инсулин</button>
+        <br>
+        <h3>Болус за въглехидрати</h3>
+        <h4><output id="answer1"></output></h4>
+        <br>
+        <h3>Кръвна захар (mmol)</h2>
+        <h4><output id="answer2"></output></h3>
+        <br>
+        <div class = "container_with_saving_data">
+          <h3>Обща доза инсулин</h2>
+          <h4><output id="answer3"></output></h4>
+          <button id = "insulin_button">Запази</button>
+        </div>
+      </div>
+
+
+      <div id = "Saved_data">
+        <h1>Записани данни</h1>
+        <p>Грамове въглехидрати:</p>
+        <p id = "carbs_text"></p>
+        <p>Текуща кръвна захар:</p>
+        <p id = "blood_sugar_text"></p>
+        <p>Доза инсулин:</p>
+        <p id = "insulin_text"></p>
+      </div>
       </section>
+
   </main>
 
-  <script src="CalcolatingTheInsulin.js"></script>
+  <script src="CalculatingTheInsulin.js"></script>
 </body>
 </html>
 
