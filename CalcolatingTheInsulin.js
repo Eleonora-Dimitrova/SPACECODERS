@@ -22,12 +22,8 @@ function calculateInsulin() {
 
     
     let carbBolus = round((carbs / insulinCarbRatio),2);
-    
     let correctionBolus = round(((bloodSugar - targetBloodSugar) / correctionFactor),2);
-    
     let totalInsulin = round((carbBolus + correctionBolus),2);
-    
-    
         
     document.getElementById("answer1").textContent = `${carbBolus}`
     document.getElementById("answer2").textContent = `${correctionBolus}`
